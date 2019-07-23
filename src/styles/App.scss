@@ -1,0 +1,153 @@
+@import "./variables.scss";
+
+@mixin col-attr {
+  .col {
+    border: 0px;
+  }
+}
+
+@mixin btn-class($backgrond-color, $text-color) {
+  background: $backgrond-color;
+  color: $text-color;
+  margin-right: 0px;
+  margin-left: 5px;
+  border: none;
+}
+
+
+.home-container {
+  .btn, .btn-small{
+    @include btn-class($button-background-color, $white-color); 
+  }  
+  .alert-container {
+    padding : 20px;
+  }
+  .alert-close-btn {
+    @include pointer-mouse;
+    line-height: 25px !important;
+  }
+}
+
+.nav-header {
+  .brand-logo {
+    position : relative;
+    @include pointer-mouse;
+  }
+}
+
+.navbar {
+  color: #fff;
+  background-color: $base-color;
+  width: 100%;
+  height: 56px;
+  line-height: 56px;
+}
+
+.search-container {
+  @include col-attr;
+}
+
+.movies-container {
+  @include col-attr;
+}
+
+.movie-img {
+  width: 100%;
+  height: 360px;
+}
+
+.movies-card {
+  margin-bottom: 10px;
+  .card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: .25rem;
+  }
+}
+
+.margin-left {
+  margin-left: 10px;
+}
+
+.main {
+  .alert {
+    margin-bottom: 0px;
+    border: 1px solid transparent;
+  }
+}
+
+.error {
+  background-color: red;
+  @include margin-top-10px;
+}
+
+.success {
+  background-color: green;
+  @include margin-top-10px;
+}
+
+.info {
+  background-color: #0A05FC;
+  @include margin-top-10px;
+}
+
+.col {
+  border: 1px solid;
+}
+
+.label{
+  font-weight: 500;
+}
+
+.navbar-brand {
+  display: inline-block;
+  padding-top: .3125rem;
+  padding-bottom: .3125rem;
+  margin-right: 1rem;
+  font-size: 2rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+.card-content {
+  p{
+    font-size: 10px;
+  }
+  .card-list-title{
+    font-weight: bold;
+  }
+}
+
+.card .card-content {
+  padding: 0px;
+  border-radius: 0 0 2px 2px;
+}
+
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+  background-color: $white-color;
+  width: 300px;
+  margin-top: 12px;
+}
+
+nav form {
+  width: auto;
+}
+
+.btn i, .btn-large i, .btn-small i, .btn-floating i, .btn-large i, .btn-small i, .btn-flat i {
+  font-size: 1.3rem;
+  line-height: unset;
+}
+
+nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
+  display: block;
+  font-size: 24px;
+  height: 56px;
+  line-height: unset;
+}
