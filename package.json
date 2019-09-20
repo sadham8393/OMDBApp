@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
+    "gh-pages": "^2.1.1",
     "jquery": "^3.4.1",
     "materialize-css": "^1.0.0-rc.2",
     "react": "^16.8.6",
@@ -16,6 +17,8 @@
   "scripts": {
     "clean": "rimraf dist",
     "start": "webpack-dev-server --open --mode development",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "NODE_ENV=production npm run clean && webpack -p",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -46,6 +49,7 @@
       "last 1 safari version"
     ]
   },
+  "homepage": "https://github.com/sadham8393/OMDBApp",
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
